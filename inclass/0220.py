@@ -1,6 +1,5 @@
 # # Truthy and Falsy
 # a = "dddd"
-
 # if a:
 #     print("hi")
 
@@ -49,14 +48,14 @@
 #     if i == 2:
 #         break
 #     i += 1
-# continue 直接進入下一圈
-i = 0
-while i < 5:
-    if i == 2:
-        i += 1
-        continue
-    print(i)
-    i += 1
+# # continue 直接進入下一圈
+# i = 0
+# while i < 5:
+#     if i == 2:
+#         i += 1
+#         continue
+#     print(i)
+#     i += 1
 
 # i = 1
 # while i < 4:
@@ -85,3 +84,10 @@ while i < 5:
 # aa = ['A','B','C']
 # for i, a in enumerate(aa, start = 100):
 #     print(i, a)
+
+# # DOMjudge 固定用法 ctrl + d 結束
+# import sys
+# q = sys.stdin.read()
+# 或
+# q = """this is ok
+# hi """
