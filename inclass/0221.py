@@ -29,11 +29,11 @@
 
 # 字典 dictionary  在其他地方稱作json
 # 使用{}建立
-police = {
-    "name": "秋山麗子", 
-    "height": 161, 
-    "is_rich": True
-}
+# police = {
+#     "name": "秋山麗子", 
+#     "height": 161, 
+#     "is_rich": True
+# }
 # print(police["name"]
 # get 當值不存在，預設回傳None，可設定回傳值
 # print(police.get("zzz", "get"))
@@ -47,6 +47,86 @@ police = {
 # police["name"] = "兩津勘吉"
 # print(police)
 
-# 刪除
-del police["is_rich"]
-print(police)
+# # 刪除
+# del police["is_rich"]
+# print(police)
+
+# # 查詢
+# print(police.keys())
+# print(police.values())
+# print(police.items())
+
+# # 僅能判斷keys，不能判斷values
+# if "height" in police:
+#     print(True)
+
+# # 可判斷values
+# if 161 in police.values():
+#     print(True)
+
+# # **展開所有字典
+# # 若key一樣，則回傳最後的value值
+# a = {"key": 100}
+# b = {"key": 300}
+# c = {**a,**b}
+# print(c)
+
+# # *展開所有的清單
+# a = [1,2,3]
+# b = [4,5,6]
+# c = [*a,*b]
+# print(c)
+# a = [1,2,3,4]
+# print(*a,sep = "~")
+
+# taoyuan = {
+#     "名稱":"桃園",
+#     "人口":100_000,
+#     "是否為直轄市":"是"
+# }
+# taipei = {
+#     "名稱":"台北",
+#     "人口":300_000,
+#     "是否為直轄市":"是"
+# }
+# miaoli = {
+#     "名稱":"苗栗",
+#     "人口":50_000,
+#     "是否為直轄市":"否"
+# }
+# taiwan = [taoyuan, taipei, miaoli]
+# # print(taiwan[0].get("名稱")) #提出台灣第一個地區的"名稱"
+# # print(taiwan[0]["名稱"])
+
+# tokyo = {
+#     "名稱":"東京",
+#     "人口":1_000_000,
+#     "是否為直轄市":"是"
+# }
+# osaka = {
+#     " 名稱":"大阪",
+#     "人口":300_000,
+#     "是否為直轄市":"是"
+# }
+# japan = [tokyo, osaka]
+
+# earth = {"japan" : japan,
+#          "taiwan" : taiwan
+# }
+# print(earth["japan"][1]["人口"])
+
+# # 用字典計算字元數量
+# dict = {
+
+# }
+# b = list("abcacba")
+# for i in b: 
+#     if i not in dict:
+#         dict[i] = 1
+#     else:
+#         dict[i] += 1
+# print(dict)
+
+# # 利用Counter計算文字數量
+# from collections import Counter
+# print(Counter(input("輸入一串文字")))
