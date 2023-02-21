@@ -130,3 +130,53 @@
 # # 利用Counter計算文字數量
 # from collections import Counter
 # print(Counter(input("輸入一串文字")))
+
+# # 函式
+# def tool(x: str = "*", y: int = 20) -> str:
+#     """我會回傳箭頭"""
+#     for i in range(0,y):
+#         print(f"{i*x}")
+#     for i in range(y,0,-1):
+#         print(f"{i*x}")
+
+#     return f"字元, {x}"
+
+# # map(fn,iterable)
+# # Callable 使物件可被呼叫
+# # List items型態為list
+# from typing import Callable, List
+# def my_map(fn: Callable, items: List):
+#     rtn = []
+#     for item in items:
+#         rtn.append(fn(item))
+#     return rtn
+
+# a = [1, 2, 3, 4, 5]
+# print(my_map(str, a))
+
+# # filter(iterable)
+# a = [1, 2, 3, 4, 5]
+# from typing import Iterable
+# def my_filter(items: Iterable, num = int):
+#     rtn = []
+#     for i in items:
+#         if i != num:
+#             rtn.append(i)
+#     return rtn
+# print(my_filter(a, 3))
+
+# # fn: Callable 可呼叫其他函式運算
+# from typing import Callable, List
+# def my_filter(fn: Callable, items: List) -> List:
+#     rtn = []
+#     for item in items:
+#         if fn(item) == True:
+#             rtn.append(item)
+#     return rtn
+# def is_over_three(n: int) -> bool:
+#     return n > 3
+# a = [1, 2, 3, 4, 5]
+# print(my_filter(is_over_three, a))
+
+# # lambda 直接return n<3
+# print(my_filter(lambda n: n<3, a))
