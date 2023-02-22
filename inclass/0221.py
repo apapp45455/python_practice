@@ -180,20 +180,3 @@
 
 # # lambda 直接return n<3
 # print(my_filter(lambda n: n<3, a))
-
-# import itertools
-# def runningSum(nums):
-#     """
-#     :type nums: List[int]
-#     :rtype: List[int]
-#     """
-#     return list(itertools.accumulate(nums))
-# a = runningSum([1,2,3,4,5])
-# print(a)
-# # import itertools
-# # a=[1,2,3,4,5]
-# # b = itertools.accumulate(a)
-# # print(list(b))
-
-import pandas as pd
-a = pd.read()
