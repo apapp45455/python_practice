@@ -1,49 +1,54 @@
-# class 小括號可有可無
-# 類別(設計稿)
-class Chair():
-    name = "椅子"
-    # 初始化
-    def __init__(self, c: str) -> None:
-        self.color = c 
+# # class 小括號可有可無
+# # 類別(設計稿)
+# class Chair():
+#     name = "椅子"
+#     # 初始化
+#     def __init__(self, c: str) -> None:
+#         self.color = c 
     
-    def seat(self) -> None:
-        print(f'{self.color}{self.name}舒服')
+#     def seat(self) -> None:
+#         print(f'{self.color}{self.name}舒服')
 
-    def __str__(self) -> str:
-        return f"{self.color}的椅子"
+#     def __str__(self) -> str:
+#         return f"{self.color}的椅子"
     
-    def __eq__(self, other) -> bool:
-        return self.color == other.color
+#     def __eq__(self, other) -> bool:
+#         return self.color == other.color
 
-a_chair = Chair("red") # 物件
-# a_chair.color = "red"
-b_chair = Chair("green") # 物件
-# b_chair.color = "green"
-c_chair = Chair("green")
+# a_chair = Chair("red") # 物件
+# # a_chair.color = "red"
+# b_chair = Chair("green") # 物件
+# # b_chair.color = "green"
+# c_chair = Chair("green")
 
-print(a_chair.color) # red
-print(b_chair.color) # green
+# print(a_chair.color) # red
+# print(b_chair.color) # green
 
-a_chair.seat() # red舒服
-b_chair.seat() # green舒服
+# a_chair.seat() # red舒服
+# b_chair.seat() # green舒服
 
-print(a_chair) # red的椅子
-print(b_chair) # green的椅子
+# print(a_chair) # red的椅子
+# print(b_chair) # green的椅子
 
-print(a_chair == b_chair) # Flase
-print(b_chair == c_chair) # True
+# print(a_chair == b_chair) # Flase
+# print(b_chair == c_chair) # True
 
-# 繼承
-class Sofa(Chair):
-    name = "沙發"
+# # 繼承
+# class Sofa(Chair):
+#     name = "沙發"
 
-    def lay(self) -> None:
-        print(f'{self.color}{self.name}可以躺ㄟ~')
+#     def lay(self) -> None:
+#         print(f'{self.color}{self.name}可以躺ㄟ~')
+    
+#     def seat(self) -> None:
+#         super().seat() # 呼叫所繼承的父類別
+#         print("zzz")
 
-sofa_a = Sofa("black")
-sofa_b = Sofa("white")
-sofa_a.seat()
-sofa_b.lay()
+# sofa_a = Sofa("black")
+# sofa_b = Sofa("white")
+# sofa_a.seat()
+# sofa_b.lay()
+
 # # 機器人練習
 # class Robot:
 #     def __init__(self, x: int, y: int, actions: str) -> None:
@@ -76,3 +81,22 @@ sofa_b.lay()
 
 # print(Robot(0, 0, "UDLR"))
 
+# # 讀取資料庫
+# class BasedCRUD:
+#     data = list(range(1, 51))
+
+#     def read_data(self) -> list[int]:
+#         return self.data
+
+# class EvenCRUD(BasedCRUD):
+#     def read_data(self) -> list[int]:
+#         raw_data = super().read_data()
+#         return list(filter(lambda x: x % 2 == 0, raw_data))
+
+# print(EvenCRUD().read_data())
+
+# import my_module as mm
+
+# a = mm.A()
+
+# a.hello()
