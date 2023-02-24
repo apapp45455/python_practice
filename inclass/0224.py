@@ -96,7 +96,39 @@
 # print(EvenCRUD().read_data())
 
 # import my_module as mm
-
 # a = mm.A()
-
 # a.hello()
+
+
+# # I/O 處理
+# f = open('file.txt', 'r')
+# print(f.read())
+
+# f.close()
+
+# # 覆寫
+# f = open('file.txt', 'w', encoding='utf-8')
+# f.write('哈囉你好嗎')
+# f.close()
+
+# # append
+# f = open('file.txt', 'a', encoding='utf-8')
+# f.write('，衷心感謝')
+# f.close()
+
+# with open ('file.txt', 'w', encoding='utf-8') as f:
+#     f.write('Who lives in pineapple under the sea?')
+
+# try:
+#     print(1111/0)
+# except:
+#     print("Error")
+
+# try:
+#     pwd = input("請輸入您的密碼: ")
+#     if len(pwd)<8:
+#         raise Exception("密碼長度不足")
+#     if len(pwd)>16:
+#         raise Exception("密碼長度太長")
+# except Exception as e:
+#     print("密碼長度檢查異常: " + str(e))
